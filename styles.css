@@ -1,0 +1,353 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    background-image: linear-gradient(rgba(228, 224, 237, 0.846), rgba(236, 233, 240, 0.636)), url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.language-toggle {
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+.language-btn {
+    background: #9B89C9;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.language-btn:hover {
+    background: #8A75BF;
+    transform: translateY(-2px);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: #D9766D;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1.zh {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 4.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #D9766D;
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: #D9766D;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.vows {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.vow-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.vow {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-effect {
+    background: linear-gradient(45deg, 
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(214, 206, 230, 0.3) 50%,
+        rgba(217, 118, 109, 0.2) 100%);
+    background-size: 200% 200%;
+    animation: gradientBG 6s ease infinite;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.glass-effect:hover {
+    background: linear-gradient(45deg, 
+        rgba(255, 255, 255, 0.6) 0%,
+        rgba(214, 206, 230, 0.4) 50%,
+        rgba(217, 118, 109, 0.3) 100%);
+    background-size: 200% 200%;
+    transform: translateY(-5px);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        inset 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.glass-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        transparent,
+        rgba(214, 206, 230, 0.2),
+        transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.glass-effect:hover::before {
+    transform: translateX(100%);
+}
+
+.vow h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #D9766D;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.vow p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding-left: 2rem;
+    position: relative;
+    background: linear-gradient(45deg, #FFB6C1, #D4AF37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 6s ease infinite;
+    font-style: italic;
+}
+
+.vow .zh {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+    padding-left: 2rem;
+    position: relative;
+    background: linear-gradient(45deg, #FFB6C1, #D4AF37);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 6s ease infinite;
+    font-style: italic;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 3rem 0;
+    position: relative;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url('../images/footer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-logo {
+    max-width: 200px;
+    height: auto;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    position: relative;
+    z-index: 1;
+}
+
+.footer-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+/* Language toggle styles */
+.en, .zh {
+    display: none;
+}
+
+.en.active, .zh.active {
+    display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h1.zh {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .vow {
+        padding: 1.5rem;
+    }
+
+    .vow h2 {
+        font-size: 2rem;
+    }
+
+    .vow p {
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+    }
+
+    .vow .zh {
+        font-size: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .zh {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 2rem 0;
+    }
+    
+    .footer-logo {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h1.zh {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .vow {
+        padding: 1rem;
+    }
+
+    .vow h2 {
+        font-size: 1.6rem;
+    }
+
+    .vow p {
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+
+    .vow .zh {
+        font-size: 0.95rem;
+        padding-left: 1rem;
+    }
+
+    .zh {
+        font-size: 0.95rem;
+    }
+
+    footer {
+        padding: 1.5rem 0;
+    }
+    
+    .footer-logo {
+        max-width: 150px;
+    }
+} 
